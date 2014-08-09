@@ -5,6 +5,7 @@ class ProfessorsController < ApplicationController
   def create
     @professor = Professor.new(professor_params)
     if @professor.save
+      Professormailer.send_email(@professor).deliver
       redirect_to success_url
     else
       redirect_to failure_url
