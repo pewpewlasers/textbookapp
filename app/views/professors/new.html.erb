@@ -1,0 +1,22 @@
+<div class="banner">
+	<div class="banner-container">
+		<h1 class="banner-head">
+			It shouldn't cost an arm and a leg to buy textbooks.
+		</h1>
+
+		<p class="description">
+		The newest edition of a textbook costs, on average, 1000% more than the previous edition, 
+		with only minor changes. Send us your professor's email, and we'll ANONYMOUSLY email them
+		the benefits of assigning used textbooks.
+		</p>
+		
+		<div class="email-form">
+			<%= form_for :professor, url: professors_path, :html => { :class => 'pure-form' } do |f| %>
+				<%= f.text_field :email, :placeholder => 'Professor\'s Email Here' %>
+				<%= f.submit 'End', :class => 'pure-button pure-button-primary' %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
